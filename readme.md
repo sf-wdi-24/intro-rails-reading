@@ -9,59 +9,61 @@ Get in the habit of exploring Rails Guides as you approach new topics in Rails!
 
 ## Getting Started
 
-* Fork this repo, and clone it into your `develop` folder on your local machine. Create a new file called `answers.md`.
+1. Fork this repo, and clone it into your `develop` folder on your local machine. Create a new file called `answers.md`.
 
-* In a different directory (outside `intro-rails-reading`), read and complete the <a href="http://guides.rubyonrails.org/getting_started.html" target="_blank">Getting Started</a> tutorial steps through section 5.7 (Showing Articles). Don't worry if you don't quite understand everything you're doing yet.
+2. In a different directory (outside `intro-rails-reading`), **read and complete** the <a href="http://guides.rubyonrails.org/getting_started.html" target="_blank">Getting Started</a> tutorial steps through section 5.7 (Showing Articles). Don't worry if you don't quite understand everything you're doing yet.
 
-* Also, read chapters 1, 2, and 5 of the <a href="http://guides.rubyonrails.org/active_record_basics.html" target="_blank">Active Record Basics</a> guide. You don't need to incorporate these into your Getting Started project; just look over the syntax.
+3. Also, read chapters 1, 2, and 5 of the <a href="http://guides.rubyonrails.org/active_record_basics.html" target="_blank">Active Record Basics</a> guide. You don't need to incorporate these into your Getting Started project; just look over the syntax.
 
-* **As you work through the guides**, answer the following questions in your `answers.md` file (in your `intro-rails-reading` directory). **Each answer should be 8 words or less!**
+4. **As you work through the guides**, answer the following [questions](#questions) in your `answers.md` file (in your `intro-rails-reading` directory). **Each answer should be 8 words or less!**
 
-  1. What is a strength of Rails (or something you like about Rails)?
+## Questions
 
-  2. What is the name of the server Rails comes with, and what is the name of the database it comes with?
+1. What is a strength of Rails (or something you like about Rails)?
 
-  3. What is a "resource"?
+2. What is the name of the server Rails comes with, and what is the name of the database it comes with?
 
-  4. What is a "controller"? How is it different from a "route"?
+3. What is a "resource"?
 
-  5. In Express, `server.js` contained our routes. Where was controller logic defined in our Express projects?
+4. What is a "controller"? How is it different from a "route"?
 
-  6. Look at `app/views/layouts/application.html.erb`. What does this file remind you of, and what does it contain?
+5. In Express, `server.js` contained our routes. Where was controller logic defined in our Express projects?
 
-  7. The `app/controllers/articles_controller.rb` file looks like this:
+6. Look at `app/views/layouts/application.html.erb`. What does this file remind you of, and what does it contain?
 
-  	```ruby
-  	class ArticlesController < ApplicationController
-  	 	def new
-  		end
+7. The `app/controllers/articles_controller.rb` file looks like this:
 
-  		def create
-  		  @article = Article.new(article_params)
-  		  @article.save
-  		  redirect_to @article
-  		end
+	```ruby
+	class ArticlesController < ApplicationController
+	 	def new
+		end
 
-  		def show
-  		  @article = Article.find(params[:id])
-  		end
+		def create
+		  @article = Article.new(article_params)
+		  @article.save
+		  redirect_to @article
+		end
 
-  		private
-  		  def article_params
-  		    params.require(:article).permit(:title, :text)
-  		  end
-  	end
-  	```
+		def show
+		  @article = Article.find(params[:id])
+		end
 
-    * What does the first line `ArticlesController < ApplicationController` mean?
-    * How does the `new` method know which view to display?
-    * Why does `@article` have that `@`?
+		private
+		  def article_params
+		    params.require(:article).permit(:title, :text)
+		  end
+	end
+	```
 
-  8. What is Active Record? What was the equivalent tool we used with Express?
+  * What does the first line `ArticlesController < ApplicationController` mean?
+  * How does the `new` method know which view to display?
+  * Why does `@article` have that `@`?
 
-  9. What is a "migration"?
+8. What is Active Record? What was the equivalent tool we used with Express?
 
-  10. List at least one question you have about Rails (can go over 8 words if needed).
+9. What is a "migration"?
+
+10. List at least one question you have about Rails (can go over 8 words if needed).
 
 ## Submission
 
